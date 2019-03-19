@@ -1,0 +1,11 @@
+version: "2"
+services:
+  cam:
+    container_name: cam
+    restart: always
+    build: .
+    image: tp6m35p4/socket_microservices:lastest
+    volumes:
+    - ./cam/configs:/app/configs
+    ports:
+    - "3000:3000"
